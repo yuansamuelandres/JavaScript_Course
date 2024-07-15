@@ -1,19 +1,16 @@
 // In the name of Allah
 
-console.log("Web \"School\"")
-console.log("Web \nSchool")
+/* Challenge 1: Variable & Concatenation */
+let
+    card_Title = "Elzero"
+    card_Description = "Elzero Web School" 
+    card_Date = "25/10";
 
-let x = "We love"
-let y = "JavaScript"
-document.write(x + " " + y)         // Legacy code
-console.log(`${x} ${y}`)            // ES 6
+let card = `
+    <div class="card">
+        <h3>Hello ${card_Title}</h3>
+        <p>${card_Description}</p>
+        <span>${card_Date}</span>
+    </div>`
 
-/*
-String Syntax + Character Escape Sequences:
-    - Escape & Line-Continue Operator => \
-    - New Line Operator => \n
-
-Concatenation:
-
-Template Literals:
-*/
+document.write(card.repeat(4))
