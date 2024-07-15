@@ -1,24 +1,19 @@
 // In the name of Allah
 
-var x = 0
-let y = 0
-const z = 0
+console.log("Web \"School\"")
+console.log("Web \nSchool")
+
+let x = "We love"
+let y = "JavaScript"
+document.write(x + " " + y)         // Legacy code
+console.log(`${x} ${y}`)            // ES 6
 
 /*
-Variables:
-    var
-        - Redeclare (yes)
-        - Acces before declaring (no => undefined)
-        - Variable scoop drama (yes)
-        - Block or Function scope (Function)
-    let
-        - Redeclare (no => error)
-        - Acces before declaring (no => error)
-        - Variable scoop drama (no)
-        - Block or Function scope (Function)
-    const
-        - Redeclare (no => error)
-        - Acces before declaring (no => error)
-        - Variable scoop drama (no)
-        - Block or Function scope (Block)
+String Syntax + Character Escape Sequences:
+    - Escape & Line-Continue Operator => \
+    - New Line Operator => \n
+
+Concatenation:
+
+Template Literals:
 */
