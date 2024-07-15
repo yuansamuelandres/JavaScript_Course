@@ -1,17 +1,20 @@
-//In the name of Allah
+// In the name of Allah
 
-console.log("log")
-console.error("error")
-console.log("Hello from %cJS File", "color: yellow; font-size: 40px;")
-
-
+console.log(typeof "Ahmed")
+console.log(typeof 700)
+console.log(typeof [10, 15, 17])
+console.log(typeof ['Yuan', 'Nidal', 'Ahmed'])
+console.log(typeof {name: "Yuan"})
+console.log(typeof true)
+console.log(typeof undefined)
+console.log(typeof null)        //Object
 
 /*
-Console Methods:
-    log
-    error
-    table
-
-Styling Console:
-    Directive %c
+Data Types:
+    - String
+    - Number
+    - Object => Array
+    - Object
+    - Boolean
+    - Undefined
 */
