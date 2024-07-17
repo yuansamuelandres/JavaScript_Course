@@ -1,18 +1,23 @@
 // In the name of Allah
 
-console.log(10 + "Hey")             // String Result
-console.log(10 - "hey")             // NaN
-console.log(typeof NaN)             // number
-let num = 6
-console.log(num++, num, ++num)
+console.log(+"-100")
+console.log(+null)
+console.log(+true)
+console.log(-null)
 
-/* Arithmetic Operators:
-    - Addition
-    - Subtraction
-    - Multiplication
-    - Division
-    - Exponentiation
-    - Modulus
-    - Increment [post & pre]
-    - Decrement [post & pre]
+console.log(true - null)
+
+let x = 5
+x += 95
+
+/* 
+    Unary Plus: returns a number
+    Unary Negative
+
+    Type Coercion (Type Casting)
+
+    Assignment Operators:
+        +=
+        -=
+        /=
 */
