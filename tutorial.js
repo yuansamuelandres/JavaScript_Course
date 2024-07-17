@@ -1,16 +1,18 @@
 // In the name of Allah
 
-/* Challenge 1: Variable & Concatenation */
-let
-    card_Title = "Elzero"
-    card_Description = "Elzero Web School" 
-    card_Date = "25/10";
+console.log(10 + "Hey")             // String Result
+console.log(10 - "hey")             // NaN
+console.log(typeof NaN)             // number
+let num = 6
+console.log(num++, num, ++num)
 
-let card = `
-    <div class="card">
-        <h3>Hello ${card_Title}</h3>
-        <p>${card_Description}</p>
-        <span>${card_Date}</span>
-    </div>`
-
-document.write(card.repeat(4))
+/* Arithmetic Operators:
+    - Addition
+    - Subtraction
+    - Multiplication
+    - Division
+    - Exponentiation
+    - Modulus
+    - Increment [post & pre]
+    - Decrement [post & pre]
+*/
