@@ -1,19 +1,28 @@
 // In the name of Allah
 
-/* Challenge 3: Number Methods */
-let a = 1_00
-let b = 2_00.5
-let c = 1e2
-let d = 2.4
+let theName = "  Ahmed  "
+console.log(theName[2])
+console.log(theName.trim())
+console.log(theName.split(" ", 1))
+console.log(theName.substring(2, 3))
+console.log(theName.substring(2, 4))
 
-console.log(Math.trunc(Math.min(a, b, c, d)))
-
-console.log(a ** Math.floor(d))
-
-console.log(Math.trunc(d))
-console.log(Math.floor(d))
-console.log(parseInt(d.toFixed(0)))
-console.log(Math.round(d))
-
-console.log((Math.floor(b) / Math.ceil(d)).toFixed(2))
-console.log(Math.round(Math.floor(b) / Math.ceil(d)))
+/* String Methods:
+    - Access with index => []
+    charAt()
+    length
+    trim()
+    toUpperCase()
+    toLowerCase()
+    - Chain Methods
+    indexOf("" [Mandatory], Start [Optional] 0)
+    lastIndexOf("" [Mandatory], Start [Optional] Length)
+    slice(Start [Mandatory], End [Optional] doesn't include the end)
+    repeat()
+    split("Separator" [Optional], Limit [Optional])
+    substring(Start [Mandatory], End [Optional])
+    substr(Start [Mandatory], Chars to extract)
+    includes()
+    startsWith()
+    endsWith()          deals with Length not Index
+*/
