@@ -1,28 +1,31 @@
 // In the name of Allah
 
-console.log(typeof "Yuan" === typeof "Muhammad")
+let access = true
 
-let price = 0
-console.log(`The price is ${price ?? 200}`)
+if (access === false) {
+    access = true
+}
+else if (access === null) {
+    console.log("Acces denied.")
+}
+else {
+    console.log("Access granted!")
+}
 
-/* Operators:
-    Comparison...
-        ==
-        !=
+access === false
+    ? access = true : 
+    access === null
+    ? console.log("Acces denied.") :
+    console.log("Access granted!")
 
-        ===
-        !===
+/* if Condition:
+    if (Condition) {
+        true
+    }
+    else {
+        false
+    }
 
-        >
-        =>
-        <
-        =<
-    
-    Logical...
-        !
-        &&
-        ||
-
-    Nullish Coalescing Operator:
-        ||
+Conditional Ternary Operator:
+    Condition ? if True : if False
 */
