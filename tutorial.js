@@ -2,6 +2,9 @@
 
 console.log(typeof "Yuan" === typeof "Muhammad")
 
+let price = 0
+console.log(`The price is ${price ?? 200}`)
+
 /* Operators:
     Comparison...
         ==
@@ -18,5 +21,8 @@ console.log(typeof "Yuan" === typeof "Muhammad")
     Logical...
         !
         &&
+        ||
+
+    Nullish Coalescing Operator:
         ||
 */
