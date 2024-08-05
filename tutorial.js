@@ -1,31 +1,29 @@
 // In the name of Allah
 
-let access = true
+/* Challenge 5: if Condition */
+let a = 10
+a < 10 ? console.log(10) :
+a>= 10 && a<= 40 ? console.log("10 To 40") :
+a > 40 ? console.log("> 40") :
+console.log("Unknown")
 
-if (access === false) {
-    access = true
+let st = "Elzero Web School"
+if ((st.length * 2).toString() === "34") {
+    console.log("Good")
 }
-else if (access === null) {
-    console.log("Acces denied.")
-}
-else {
-    console.log("Access granted!")
+
+if (st.slice(st.indexOf('W')-1, st.indexOf('W')+1).trim().toLowerCase() === "w") {
+    console.log("Good")
 }
 
-access === false
-    ? access = true : 
-    access === null
-    ? console.log("Acces denied.") :
-    console.log("Access granted!")
+if (st !== "string") {
+    console.log("Good")
+}
 
-/* if Condition:
-    if (Condition) {
-        true
-    }
-    else {
-        false
-    }
+if (typeof st.length === "number") {
+    console.log("Good")
+}
 
-Conditional Ternary Operator:
-    Condition ? if True : if False
-*/
+if (st.slice(st.indexOf('E'),st.indexOf('o')+1).repeat(2) === "ElzeroElzero") {
+    console.log("Good")
+}
