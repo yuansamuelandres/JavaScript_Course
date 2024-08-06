@@ -1,23 +1,47 @@
 // In the name of Allah
 
-let day = 0
-switch (day) {
-    case 0:
-        console.log("Saturday")
+/* Challenge 6: switch & if Conditions */
+let job = "Manager"
+let salary = 0
+switch (job) {
+    case "Manager":
+        salary = 8000
+        console.log(`Salary: ${salary}`)
+        break
+    case "IT":
+    case "Support":
+        salary = 6000
+        console.log(`Salary: ${salary}`)
+        break
+    case "Developer":
+    case "Designer":
+        salary = 7000
+        console.log(`Salary: ${salary}`)
         break
     default:
-        console.log("Unknown")
+        salary = 4000
+        console.log(`Salary: ${salary}`)
 }
 
-/* switch Statement:
-    switch (expression) {
-        cade 1:
-            code
-            break;
-        case 2:
-            code
-            break;
-        default:
-            code
-    }
-*/
+let holidays = 0
+let money = 0
+if (holidays === 0) {
+    money = 5000
+    console.log(`Money: ${money}`)
+}
+else if (holidays === 1 || holidays === 2) {
+    money = 3000
+    console.log(`Money: ${money}`)
+}
+else if (holidays === 3) {
+    money = 2000
+}
+else if (holidays === 4) {
+    money = 1000
+    console.log(`Money: ${money}`)
+}
+else if (holidays === 5) {
+    money = 0
+    console.log(`Money: ${money}`)
+}
+else {money = 0; console.log(`Money: ${money}`)}
