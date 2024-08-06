@@ -1,47 +1,40 @@
 // In the name of Allah
 
-/* Challenge 6: switch & if Conditions */
-let job = "Manager"
-let salary = 0
-switch (job) {
-    case "Manager":
-        salary = 8000
-        console.log(`Salary: ${salary}`)
-        break
-    case "IT":
-    case "Support":
-        salary = 6000
-        console.log(`Salary: ${salary}`)
-        break
-    case "Developer":
-    case "Designer":
-        salary = 7000
-        console.log(`Salary: ${salary}`)
-        break
-    default:
-        salary = 4000
-        console.log(`Salary: ${salary}`)
-}
+let myFriends = ["Yuan", "Samuel", "Andrea"], myCats = ["Mizo", "Ceres"]
+myFriends[2] = "Andrew"
+console.log(myFriends.length)
+console.log(typeof myFriends)   //object
+console.log(Array.isArray(myFriends))
 
-let holidays = 0
-let money = 0
-if (holidays === 0) {
-    money = 5000
-    console.log(`Money: ${money}`)
-}
-else if (holidays === 1 || holidays === 2) {
-    money = 3000
-    console.log(`Money: ${money}`)
-}
-else if (holidays === 3) {
-    money = 2000
-}
-else if (holidays === 4) {
-    money = 1000
-    console.log(`Money: ${money}`)
-}
-else if (holidays === 5) {
-    money = 0
-    console.log(`Money: ${money}`)
-}
-else {money = 0; console.log(`Money: ${money}`)}
+myFriends[myFriends.length] = "Ahmed"
+console.log(myFriends)
+
+myFriends.unshift("Muhammad")
+myFriends.push("Hesham")
+myFriends.shift()
+myFriends.pop()
+
+console.log(myFriends.indexOf("Muhammad"))      // -1 = Not Found
+
+myFriends.splice(myFriends.length, 0, "Muhammad")
+console.log(myFriends)
+
+let allFriends = myFriends.concat(myCats, "Memorias")
+console.log(allFriends.join(" | "))     // convert the array to a string
+
+/* Arrays & Array Methods:
+    - length
+    - unshift = add elements to the start
+    - push = add elements to the end
+    - shift = remove the first element
+    - pop = remove the last element
+    - indexOf( , )
+    - lastIndexOf( , )
+    - includes( , )
+    - sort() 
+    - reverse()
+    - slice( , ): returns a new array
+    - splice(Start [Mandatory], DeleteCount [Optional], Items to add [Optional])
+    - concat()
+    - join(Separator)
+*/
