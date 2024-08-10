@@ -1,18 +1,25 @@
 // In the name of Allah
 
-/* for loop Practise */
-let products = ["Keyboard", "Mouse", "Pen", "iPad", "Monitor", "iPhone"]
-let colors = ["Red", "Green", "Blue"]
-let showCounter = 5
+let products = ["Keyboard", "Mouse", "iPad"]
+let i = 0
 
-document.write(`<h1>Show ${showCounter} Products</h1>`)
-
-for (let i=0; i < showCounter; i++) {
-    document.write(`<div>`)
-    document.write(`<h3>[${i+1}] ${products[i]}</h3>`)
-    for (let j=0; j < colors.length; j++) {
-        document.write(`<p>${colors[j]}</p>`)
-    }
-    document.write(`<p>${colors.join(" | ")}</p>`)
-    document.write(`</div>`)
+while (i < 10) {
+    console.log(i)
+    i++
 }
+
+do {
+    console.log(i)
+    i++
+} while (false)
+
+/* while loop:
+    while (condition) {
+        Block of code
+    }
+
+do-while loop:
+    do {
+        Block of code
+    } while (condition)         will do the code for the first time no matter what
+*/
