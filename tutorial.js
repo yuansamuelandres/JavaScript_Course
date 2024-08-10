@@ -1,24 +1,28 @@
 // In the name of Allah
 
-/* Challenge 7: Arrays */
-let zero = 0
-let couner = 3
-let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"]
+let myFriends = ["Yuan", "Muhammad", 5, "Samuel", "Andrea", 78]
+let measure = ["Loyal", "Kind"]
 
-let one = true
-let two = couner - true
+mainloop: for (let i=0; i < myFriends.length; i++) {
+    if (typeof myFriends[i] === "number") {
+        continue mainloop;
+    }
+    console.log(myFriends[i])
+    nestedloop: for (let j=0; j < measure.length; j++) {
+        console.log(`- ` + measure[j])
+    }
+    console.log("#".repeat(15))
+}
 
-my = my.reverse().slice(two)
-console.log(my)
+/* For loop:
+    for ([1] [2] [3]) {
+        Block of code
+    }
+    [1] initialization
+    [2] condition
+    [3] action after repeating the code
 
-my = my.slice(one, my.length - one)
-console.log(my)
-
-my = my.splice(one).join().split("")
-my[zero] = 'E'
-my[zero + true] = 'l'
-console.log(my.join(""))
-
-my = my.slice(my.length - two)
-my[my.length - one] = my[my.length - one].toUpperCase()
-console.log(my.join(""))
+    break;      stops the loop
+    continue;   exclude some value & override them
+    label;      controls the main loop from a subloop
+*/
