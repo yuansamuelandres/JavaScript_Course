@@ -1,28 +1,18 @@
 // In the name of Allah
 
-let myFriends = ["Yuan", "Muhammad", 5, "Samuel", "Andrea", 78]
-let measure = ["Loyal", "Kind"]
+/* for loop Practise */
+let products = ["Keyboard", "Mouse", "Pen", "iPad", "Monitor", "iPhone"]
+let colors = ["Red", "Green", "Blue"]
+let showCounter = 5
 
-mainloop: for (let i=0; i < myFriends.length; i++) {
-    if (typeof myFriends[i] === "number") {
-        continue mainloop;
+document.write(`<h1>Show ${showCounter} Products</h1>`)
+
+for (let i=0; i < showCounter; i++) {
+    document.write(`<div>`)
+    document.write(`<h3>[${i+1}] ${products[i]}</h3>`)
+    for (let j=0; j < colors.length; j++) {
+        document.write(`<p>${colors[j]}</p>`)
     }
-    console.log(myFriends[i])
-    nestedloop: for (let j=0; j < measure.length; j++) {
-        console.log(`- ` + measure[j])
-    }
-    console.log("#".repeat(15))
+    document.write(`<p>${colors.join(" | ")}</p>`)
+    document.write(`</div>`)
 }
-
-/* For loop:
-    for ([1] [2] [3]) {
-        Block of code
-    }
-    [1] initialization
-    [2] condition
-    [3] action after repeating the code
-
-    break;      stops the loop
-    continue;   exclude some value & override them
-    label;      controls the main loop from a subloop
-*/
