@@ -1,16 +1,17 @@
 // In the name of Allah
 
-let nums = [10, 20, 15, 30]
-let add = nums.reduce((a, c) => {
-    return a + c
-}, 5)
-console.log(add)
 
-/* Higher Order Functions:
-    Reduce(callBackFunction (Accumulator, CurrentValue, CurrentIndex, SourceArray) {}
-    , initialValue)
-        Accumulator: accumulated value in the last invocation = Mandatory
-        CurrentValue: current element being processed = Mandatory
-        CurrentIndex = Optional
-        SourceArray = Optional
-*/
+/* Filter & Reduce Practise */
+let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"]
+let check = theBiggest.reduce(function (a, c) {
+    return a.length > c.length ? a : c
+})
+console.log(check)
+
+let removeChars = ['E', '@', '@', 'L', 'Z', '@', '@', 'E', 'R', '@', 'O']
+let finalStirng = removeChars.filter(e => {
+    return !e.startsWith('@')
+}).reduce((a, c) => {
+    return `${a}${c}`
+})
+console.log(finalStirng)
