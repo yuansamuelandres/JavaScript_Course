@@ -1,21 +1,12 @@
 // In the name of Allah
 
-/* Map Practise */
-let swappingCases = "elZERo"
-let invertedNumbers = [1, -10, -20, 15, 100, -30]
-let ignoreBooleans = "Elz123er4o"
-
-let sw = swappingCases.split("").map(function (e) {
-    return e === e.toUpperCase() ? e.toLowerCase() : e.toUpperCase()
-}).join("")
-console.log(sw)
-
-let inv = invertedNumbers.map(function (e) {
-    return -e
+let friends = ["Yuan", "Samuel", "Andrew"]
+let filteredFriends = friends.filter(function (e) {
+    return e.startsWith('A') 
 })
-console.log(inv)
+console.log(filteredFriends)
 
-let ign = ignoreBooleans.split("").map(function (e) {
-    return isNaN(parseInt(e)) ? e : ""
-}).join("")
-console.log(ign)
+/* Higher Order Functions:
+    Filter(callBackFunction (Element, Index, Array) {}, thisArgument)
+        returns a new array after passing a test (condition)
+*/
