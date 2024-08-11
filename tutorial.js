@@ -1,22 +1,23 @@
 // In the name of Allah
 
-/* Functions Practise */
-function showInfo(us="Un", ag="Un", rt=0, show="yes", ...sk) {
-    document.write(`<div>`)
-    document.write(`<h2>Welcome, ${us}</h2>`)
-    document.write(`<p>Age: ${ag}`)
-    document.write(`<p>Hour Rate: $${rt}`)
-    if (show === "yes") {
-        if (sk.length > 0) {
-            document.write(`<p>${sk.join(" | ")}</p>`)
-        }
-        else {
-            document.write(`<p>No skills</p>`)
-        }
-    }
-    else {
-        document.write(`<p>Skills are hidden</p>`)
-    }
-    document.write(`</div>`)
+/* Challenge 9: Random Arguments Function */
+
+function showDetails(a, b, c) {
+    let name, age, availability, choice
+    typeof a === "string" ? name = a :
+        typeof b === "string" ? name = b :
+        name = c
+    typeof a === "number" ? age = a :
+        typeof b === "number" ? age = b :
+        age = c
+    typeof a === "boolean" ? availability = a :
+        typeof b === "boolean" ? availability = b :
+        availability = c
+    availability === true ? choice = "Are" : choice = "Are Not"
+    console.log(`Hello ${name}, Your Age Is ${age}, You ${choice} Available For Hire`)
 }
-showInfo("Yuan", 23, 0, "no")
+
+showDetails("Osama", 38, true)
+showDetails(38, "Osama", true)
+showDetails(true, 38, "Osama")
+showDetails(false, "Osama", 38)
