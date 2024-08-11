@@ -1,16 +1,16 @@
 // In the name of Allah
 
-/* Map & Filter Practise */
-let sentence = "I Love Foood Code Too Playing Much"
-let smallWords = sentence.split(" ").filter(e => {
-    return e.length <= 4
-}).join(" ")
-console.log(smallWords)
+let nums = [10, 20, 15, 30]
+let add = nums.reduce((a, c) => {
+    return a + c
+}, 5)
+console.log(add)
 
-let mix = "A13BD2ZX"
-let pure = mix.split("").filter(e => {
-    return !isNaN(parseInt(e))
-}).map(e => {
-    return e * e
-}).join(" # ")
-console.log(pure)
+/* Higher Order Functions:
+    Reduce(callBackFunction (Accumulator, CurrentValue, CurrentIndex, SourceArray) {}
+    , initialValue)
+        Accumulator: accumulated value in the last invocation = Mandatory
+        CurrentValue: current element being processed = Mandatory
+        CurrentIndex = Optional
+        SourceArray = Optional
+*/
