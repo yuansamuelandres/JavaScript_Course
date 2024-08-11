@@ -1,17 +1,21 @@
 // In the name of Allah
 
-let myNums = [1, 2, 3, 4, 5, 6]
-let newArray = []
+/* Map Practise */
+let swappingCases = "elZERo"
+let invertedNumbers = [1, -10, -20, 15, 100, -30]
+let ignoreBooleans = "Elz123er4o"
 
-let addSelf = myNums.map((element) => {
-    return element + element
+let sw = swappingCases.split("").map(function (e) {
+    return e === e.toUpperCase() ? e.toLowerCase() : e.toUpperCase()
+}).join("")
+console.log(sw)
+
+let inv = invertedNumbers.map(function (e) {
+    return -e
 })
-console.log(addSelf)
+console.log(inv)
 
-/* Higher Order Functions:
-    Map(callBackFunction(Element, Index, Array){}, thisArgument){}      returns a new array
-        Element = Mandatory
-        Index = Optional
-        Array = Optional
-        thisArgument = Optional
-*/
+let ign = ignoreBooleans.split("").map(function (e) {
+    return isNaN(parseInt(e)) ? e : ""
+}).join("")
+console.log(ign)
