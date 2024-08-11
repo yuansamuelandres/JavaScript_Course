@@ -1,16 +1,24 @@
 // In the name of Allah
 
-/* Filter & Reduce Practise */
-let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"]
-let check = theBiggest.reduce(function (a, c) {
-    return a.length > c.length ? a : c
-})
-console.log(check)
+let allLis = document.querySelectorAll("ul li")
+let allDivs = document.querySelectorAll(".content div")
 
-let removeChars = ['E', '@', '@', 'L', 'Z', '@', '@', 'E', 'R', '@', 'O']
-let finalStirng = removeChars.filter(e => {
-    return !e.startsWith('@')
-}).reduce((a, c) => {
-    return `${a}${c}`
+allLis.forEach(function (e) {
+    e.onclick = function () {
+        allLis.forEach(function (e) {
+            e.classList.remove("active")
+        })
+        this.classList.add("active")
+
+        allDivs.forEach(function (e) {
+            e.style.display = "none"
+        })
+    }
 })
-console.log(finalStirng)
+
+
+/* Higher Order Functions: ForEach + its Practise
+    ForEach(callBackFunction (Element, Index, Array) {}, thisArgument)   
+        doesn't return a new array
+        doesn't change the elements of the array
+*/
