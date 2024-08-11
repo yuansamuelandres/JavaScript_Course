@@ -1,23 +1,36 @@
 // In the name of Allah
 
-/* Challenge 9: Random Arguments Function */
+let print = () => 10
+console.log(print())
 
-function showDetails(a, b, c) {
-    let name, age, availability, choice
-    typeof a === "string" ? name = a :
-        typeof b === "string" ? name = b :
-        name = c
-    typeof a === "number" ? age = a :
-        typeof b === "number" ? age = b :
-        age = c
-    typeof a === "boolean" ? availability = a :
-        typeof b === "boolean" ? availability = b :
-        availability = c
-    availability === true ? choice = "Are" : choice = "Are Not"
-    console.log(`Hello ${name}, Your Age Is ${age}, You ${choice} Available For Hire`)
+var a = 1
+// let b = 2
+
+function showText() {
+    var a = 10          //var overrides the local scope
+    let b = 2
+    console.log(`From Global/function local ${a}`)
+    console.log(`From function local ${b}`)
 }
 
-showDetails("Osama", 38, true)
-showDetails(38, "Osama", true)
-showDetails(true, 38, "Osama")
-showDetails(false, "Osama", 38)
+showText()
+console.log(`From Global ${a}`)
+console.log(`From Global ${b}`)
+
+/* Anonymous Function:
+    can't be used before declaration
+
+Arrow Function: 
+    Only one line in the block of code
+
+Scope:
+    Global                      var
+    Local                       var
+    Block [if, switch, for]     let
+    Lexical                     nested functions
+*/
+/*
+! Search:
+    - Execution Context
+    - Lexical Environment
+*/
