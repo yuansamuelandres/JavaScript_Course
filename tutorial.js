@@ -1,12 +1,16 @@
 // In the name of Allah
 
-let friends = ["Yuan", "Samuel", "Andrew"]
-let filteredFriends = friends.filter(function (e) {
-    return e.startsWith('A') 
-})
-console.log(filteredFriends)
+/* Map & Filter Practise */
+let sentence = "I Love Foood Code Too Playing Much"
+let smallWords = sentence.split(" ").filter(e => {
+    return e.length <= 4
+}).join(" ")
+console.log(smallWords)
 
-/* Higher Order Functions:
-    Filter(callBackFunction (Element, Index, Array) {}, thisArgument)
-        returns a new array after passing a test (condition)
-*/
+let mix = "A13BD2ZX"
+let pure = mix.split("").filter(e => {
+    return !isNaN(parseInt(e))
+}).map(e => {
+    return e * e
+}).join(" # ")
+console.log(pure)
