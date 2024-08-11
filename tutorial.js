@@ -1,6 +1,5 @@
 // In the name of Allah
 
-
 /* Filter & Reduce Practise */
 let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"]
 let check = theBiggest.reduce(function (a, c) {
