@@ -1,32 +1,34 @@
 // In the name of Allah
 
-let myVar = "The Country"
-let user = {
-    //Properties
-    theName: "Yuan",
-    age: 23,
-    "The Country": "Egypt",
 
-    //Methods
-    ageInDays: function() {
-        return this.age * 365.25 + `!`
-    }
-}
-console.log(user.ageInDays())               //Dot Notation
-console.log(user["The Country"])    //Bracket Notation
-console.log(user.myVar)
-console.log(user[myVar])
 
-/* Object
-    Dot Notation:
-        - Not dynamic
-    Bracket Notation:
-        - Dynamic
-    New Keyword: new Object(){}
-    Create Method: Object.create({Proto Object})
-    Assign Method: Object.assign({Target Object}, {Copied Objects})
+/* DOM Selectors:
+    .getElementById()
+    .getElementsByTagName()
+    .getElementsByClassName()
+    .querySelector()             only gets you the first query it encounters
+    .querySelectorAll()
+    .title
+    .body
+    .forms
+    .links
+    .images
+
+Set Content for the Elements:
+    .innerHTML
+    .textContent
+    .src & .alt
+    .id & .className
+    .getAttribute()
+    .setAttribute(oldName, newName)
+
+Check Attributes:
+    .attributes
+    .hasAttribute()
+    .hasAttributes()            returns a boolean value
+    .removeAttribute()
 */
 /*
 ! Search:
-    - Strict Mode
+    - innerText
 */
