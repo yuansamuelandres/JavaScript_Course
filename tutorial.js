@@ -1,24 +1,29 @@
 // In the name of Allah
 
-let allLis = document.querySelectorAll("ul li")
-let allDivs = document.querySelectorAll(".content div")
+/* Challenge 11: Higher Order Functions */
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z"
 
-allLis.forEach(function (e) {
-    e.onclick = function () {
-        allLis.forEach(function (e) {
-            e.classList.remove("active")
-        })
-        this.classList.add("active")
-
-        allDivs.forEach(function (e) {
-            e.style.display = "none"
-        })
-    }
+let solution = myString.split("").filter((e) => {
+    return isNaN(parseInt(e))
 })
-
-
-/* Higher Order Functions: ForEach + its Practise
-    ForEach(callBackFunction (Element, Index, Array) {}, thisArgument)   
-        doesn't return a new array
-        doesn't change the elements of the array
-*/
+.map(e => {
+    return !e.startsWith(',') ? e : " "
+})
+.filter(function (e) {
+    return !e.includes(" ")
+})
+.map(e => {
+return e.startsWith('_') ? " " : e
+})
+.reduce((a, c) => {
+    return a === c ? `${a}` : `${a}${c}`
+})
+.split(" ")
+.reduce((a, c) => {
+    let one = true, ln = c.length - one, zero = !one
+    // console.log(`#${a} ##${c}`)
+    return c.charAt(ln) === c.charAt(ln).toUpperCase() && 
+    c.charAt(zero) === c.charAt(zero).toUpperCase()
+        ? `${a} ${c.slice(0, ln)}` : `${a} ${c}`
+})
+console.log(solution)
