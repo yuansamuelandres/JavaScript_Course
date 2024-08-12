@@ -1,34 +1,24 @@
 // In the name of Allah
 
+let myElement = document.createElement("div")
+let myAttribute = document.createAttribute("data-custom")
+let myText = document.createTextNode("Product One")
+let myComment = document.createComment("This is a comment")
 
+myElement.className = "product"
+myElement.setAttributeNode(myAttribute)
+myElement.setAttribute("data-test", "Testing")
 
-/* DOM Selectors:
-    .getElementById()
-    .getElementsByTagName()
-    .getElementsByClassName()
-    .querySelector()             only gets you the first query it encounters
-    .querySelectorAll()
-    .title
-    .body
-    .forms
-    .links
-    .images
+myElement.appendChild(myComment)
 
-Set Content for the Elements:
-    .innerHTML
-    .textContent
-    .src & .alt
-    .id & .className
-    .getAttribute()
-    .setAttribute(oldName, newName)
+myElement.appendChild(myText)
 
-Check Attributes:
-    .attributes
-    .hasAttribute()
-    .hasAttributes()            returns a boolean value
-    .removeAttribute()
-*/
-/*
-! Search:
-    - innerText
+document.body.appendChild(myElement)
+
+/* DOM [Create & Append Elements]:
+    .createElement()
+    .createAttribute()
+    .setAttributeNode()
+    .setTextNode()
+    .appendChild()
 */
