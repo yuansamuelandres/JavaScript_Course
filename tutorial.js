@@ -1,26 +1,32 @@
 // In the name of Allah
 
+/* DOM [Events] Practise */         //Validate Form
+let userInput = document.querySelector("[name='username']")
+let ageInput = document.querySelector("[name='age']")
 
+document.forms[0].onsubmit = function (e) {
+    let userValid = false
+    let ageValid = false
 
-/* DOM [Deal with Children]:
-    .children
-    .childNodes
-    .firstChild
-    .lastChild
-    .firstElementChild
-    .lastElementChild
+    console.log(userInput.value.length)
 
-DOM [Events]:
-    .onclick
-    .oncontextmenu      on mouse right click
-    .onmouseenter
-    .onmouseleave
+    if (userInput.value !== 0 && userInput.value.length <=10) {
+        userValid = true
+    }
+    if (ageInput !== "") {
+        ageValid = true
+    }
 
-    .onload
-    .onscroll
-    .onresize
+    if (userValid === false && ageValid === false) {
+        e.preventDefault()
+    }
 
-    .onfocus
-    .onblur
-    .onsubmit
-*/
+    if (userValid === false || ageValid === false) {
+        e.preventDefault()
+    }
+}
+
+document.links[0].onclick = function (event) {
+    console.log(event);
+    event.preventDefault()
+}
