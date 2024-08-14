@@ -1,28 +1,29 @@
 // In the name of Allah
 
-let span = document.querySelector(".two")
+let myP = document.querySelector("p")
 
-console.log(span.nextElementSibling)
+myP.addEventListener("click", function () {
+    console.log("Event 1")
+    console.log("Event 2")
 
-span.onclick = function () {
-    span.parentElement.style.opacity = '0'
-}
+    let newP = myP.cloneNode(true)
+    newP.className = "p-clone"
+    document.body.appendChild(newP)
+})
 
+let cloned = document.querySelector(".p-clone")
+document.addEventListener("click", function (e) {
+    if (e.target.className === "p-clone") {
+        console.log("I am cloned")
+    }
+})
 
-let myP = document.querySelector("p").cloneNode(true)
-let myDiv = document.getElementById("div")
+/* DOM [Add Event Listener]:
+    addEventListener(,)
+        - attach multiple events
+        - type the event's name without 'on' prefix
+        - error test
 
-myP.id = `${myP.id}-clone`
-
-myDiv.appendChild(myP)
-
-/* DOM [Traversing]:
-    nextSibling
-    nextElementSibling
-    previousSibling
-    previousElementSibling
-    parentElement
-
-DOM [Cloning]:
-    cloneNode(deep)     Boolean Value
+        - enable you to put an event on an element that 
+        doesn't yet exist in the page
 */
