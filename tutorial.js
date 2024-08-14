@@ -1,18 +1,19 @@
 // In the name of Allah
 
-let one = document.querySelector(".one")
-let two = document.querySelector(".two")
+let element = document.getElementById("my-div")
 
-window.onload = function () {
-    two.focus()
+console.log(element.classList)
+
+element.onclick = function () {
+    element.classList.toggle("test")
 }
 
-one.onblur = function () {
-    document.links[0].click()
-}
-
-/* DOM [Event Simulation]
-    click
-    focus
-    blur
+/* DOM [Class List]
+    classList
+        - length
+        - .contains()
+        - .item()
+        - .add()
+        - .remove()
+        - .toggle()
 */
