@@ -1,19 +1,20 @@
 // In the name of Allah
 
 let element = document.getElementById("my-div")
+let createdP = document.createElement("p")
 
-element.style.color = "red"
-element.style.fontWeight = "bold"
-element.style.cssText = "color: green;"
+element.before("Hello from JS file")
+// element.after(createdP)
+element.append("Hello from JS file")
+element.prepend(createdP)
 
-element.style.removeProperty("color")
-element.style.setProperty("font-size", "40px", "important")
+element.remove()
 
-document.styleSheets[0].rules[0].style.removeProperty("line-height")
 
-/* DON [CSS]:
-    - .style
-    - .cssText
-    - .removeProperty()
-    - .setProperty(,)
+/* DOM [Deal with Elements]:
+    before [Element || String]
+    after [Element || String]
+    append [Element || String]
+    prepend [Element || String]
+    remove()
 */
