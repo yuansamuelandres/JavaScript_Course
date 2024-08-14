@@ -1,20 +1,28 @@
 // In the name of Allah
 
-let element = document.getElementById("my-div")
-let createdP = document.createElement("p")
+let span = document.querySelector(".two")
 
-element.before("Hello from JS file")
-// element.after(createdP)
-element.append("Hello from JS file")
-element.prepend(createdP)
+console.log(span.nextElementSibling)
 
-element.remove()
+span.onclick = function () {
+    span.parentElement.style.opacity = '0'
+}
 
 
-/* DOM [Deal with Elements]:
-    before [Element || String]
-    after [Element || String]
-    append [Element || String]
-    prepend [Element || String]
-    remove()
+let myP = document.querySelector("p").cloneNode(true)
+let myDiv = document.getElementById("div")
+
+myP.id = `${myP.id}-clone`
+
+myDiv.appendChild(myP)
+
+/* DOM [Traversing]:
+    nextSibling
+    nextElementSibling
+    previousSibling
+    previousElementSibling
+    parentElement
+
+DOM [Cloning]:
+    cloneNode(deep)     Boolean Value
 */
