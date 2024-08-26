@@ -1,21 +1,21 @@
 // In the name of Allah
 
-/* Scroll Practise */
-let btn = document.querySelector("button")
+window.localStorage.setItem("color", "red")
+window.localStorage.fontWeight = "bold"
+window.localStorage["fontSize"] = "20px"
 
-window.onscroll = function () {
-    if (window.scrollY >= 600) {
-        btn.style.display = "block"
-    }
-    else {
-        btn.style.display = "none"
-    }
-}
+console.log(window.localStorage.getItem("color"))
+console.log(window.localStorage.color)
+console.log(window.localStorage["color"])
 
-btn.onclick = function () {
-    window.scrollTo({
-        left: 0,
-        top: 0,
-        behavior: "smooth"
-    })
-}
+console.log(window.localStorage.key(0))
+
+document.body.style.backgroundColor = window.localStorage.color
+
+/* BOM [Local Storage]
+    setItem(Key, Value)
+    getItem(Key)
+    removeItem(Key)
+    clear()
+    key(Index)
+*/
