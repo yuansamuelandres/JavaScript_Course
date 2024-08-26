@@ -1,21 +1,26 @@
 // In the name of Allah
 
-window.localStorage.setItem("color", "red")
-window.localStorage.fontWeight = "bold"
-window.localStorage["fontSize"] = "20px"
+/* Local Storage Practise */
+let lis = document.querySelectorAll("ul li")
+let exp = document.querySelector(".experiment")
 
-console.log(window.localStorage.getItem("color"))
-console.log(window.localStorage.color)
-console.log(window.localStorage["color"])
+if (window.localStorage.getItem("color")) {
+    exp.style.backgroundColor = window.localStorage.getItem("color")
+    lis.forEach((li) => {
+        li.classList.remove("active")
+    })
+    document.querySelector(`[data-color="${window.localStorage.getItem("color")}"]`)
+    .classList.add("active")
+}
 
-console.log(window.localStorage.key(0))
-
-document.body.style.backgroundColor = window.localStorage.color
-
-/* BOM [Local Storage]
-    setItem(Key, Value)
-    getItem(Key)
-    removeItem(Key)
-    clear()
-    key(Index)
-*/
+lis.forEach((li) => {
+    li.addEventListener("click", (e) => {
+        // console.log(e.currentTarget.dataset.color)
+        lis.forEach((li) => {
+            li.classList.remove("active")
+        })
+        e.currentTarget.classList.add("active")
+        window.localStorage.setItem("color", e.currentTarget.dataset.color)
+        exp.style.backgroundColor = e.currentTarget.dataset.color
+    })
+})
