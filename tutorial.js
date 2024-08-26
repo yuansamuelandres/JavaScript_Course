@@ -1,27 +1,21 @@
 // In the name of Allah
 
-window.scrollTo({
-    left: 500,
-    top: 200,
-    behavior: "smooth"
-})
+/* Scroll Practise */
+let btn = document.querySelector("button")
 
-/* BOM [History Object & Scrolling]
-    length
-    back()
-    forward()
-    go(Delta) => Postion in history
+window.onscroll = function () {
+    if (window.scrollY >= 600) {
+        btn.style.display = "block"
+    }
+    else {
+        btn.style.display = "none"
+    }
+}
 
-    scrollTo(x, y || Options)
-    scroll(x, y || Options)
-    scrollBy(x, y || Options)
-
-    stop()
-    print()
-    focus()
-*/
-/*
-! Search:
-    - pushState()
-    - replaceState()
-*/
+btn.onclick = function () {
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    })
+}
