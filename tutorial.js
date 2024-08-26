@@ -1,29 +1,28 @@
 // In the name of Allah
 
-let counter = setTimeout(user, 2000)
-function user (){
-    console.log("Hello")
-}
-clearTimeout(counter)
+console.log(location.protocol)
+// location.href = "/#sec02"
 
+setTimeout(function () {
+    window.open("https://google.com", "_blank",
+        "width=500, height=500, left=50, top=100", true)
+}, 2000)
 
-let div = document.querySelector("div")
-function countDown () {
-    div.innerHTML -= 1
-    if (div.innerHTML === "0") {
-        clearInterval(count)
-    }
-}
+/*BOM [location Object]
+    href
+    host
+    hostname
+    hash
+    protocol
+    reload()
+    replace()       removes the current page from the session history
+    assign()        doesn't remove the page from the session history
 
-let count = setInterval(countDown, 1000);
-/* BOM 
-    alert(message)
-    confirm(message)        returns a boolean value
-    prompt(message, defaultMessage)
-
-    setTimeout(Function, Timeout, additional parameters "of the function")
-    clearTimeout(Identifier)
-
-    setInterval(Function, Timeout, additional parameters)
-    clearInterval(Identifier)
+    close()         only closes the window opened by JavaScript
+    open(URL, WindowName or Target, Features, History?)
+*/
+/*
+! Search:
+    - window.open
+    - window Features
 */
