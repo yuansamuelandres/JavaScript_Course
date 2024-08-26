@@ -1,28 +1,27 @@
 // In the name of Allah
 
-console.log(location.protocol)
-// location.href = "/#sec02"
+window.scrollTo({
+    left: 500,
+    top: 200,
+    behavior: "smooth"
+})
 
-setTimeout(function () {
-    window.open("https://google.com", "_blank",
-        "width=500, height=500, left=50, top=100", true)
-}, 2000)
+/* BOM [History Object & Scrolling]
+    length
+    back()
+    forward()
+    go(Delta) => Postion in history
 
-/*BOM [location Object]
-    href
-    host
-    hostname
-    hash
-    protocol
-    reload()
-    replace()       removes the current page from the session history
-    assign()        doesn't remove the page from the session history
+    scrollTo(x, y || Options)
+    scroll(x, y || Options)
+    scrollBy(x, y || Options)
 
-    close()         only closes the window opened by JavaScript
-    open(URL, WindowName or Target, Features, History?)
+    stop()
+    print()
+    focus()
 */
 /*
 ! Search:
-    - window.open
-    - window Features
+    - pushState()
+    - replaceState()
 */
