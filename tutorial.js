@@ -1,30 +1,24 @@
 // In the name of Allah
 
-let myFreinds = ["Yuan", "Samuel", "Joel"]
-let [a, b, , c = "Andrew"] = myFreinds      // Destructing
-console.log(a)
-console.log(b)
-console.log(c)
+const user = {
+    theName: "Yuan",
+    theAge: 23,
+    theTitle: "Programmer",
+    theCountry: "Egypt",
+    skills: {
+        html: 70,
+        css: 80,
+    },
+}
+let theName = user.theName
+let theAge = user.theAge
+let theTitle = user.theTitle
+let theCountry = user.theCountry;
+({theName: n, theTitle, theCountry,
+    theColor = "Black", skills: {html}} = user)
+console.log(n)
+console.log(theAge)
+console.log(html)
 
-let frinds = ["Ahmed", "Sayed", "Ali"
-    , ["Shady", "Amr", ["Mohamed", "Gamal"]]]
-let [, , , [d, , [, e]]] = frinds
-console.log(d)
-console.log(e)
-
-let book = "Video"
-let video = "Book";
-// let x = book                 // old way of swapping
-// book = video
-// video = x
-// console.log(book)
-// console.log(video)
-
-[book, video] = [video, book]   // new way of swapping
-console.log(book)
-console.log(video)
-
-/* Destructing Arrays 
-Destructing = extracting data from arrays, objects, and maps 
-& setting them into new variables
+/* Destructing Objects 
 */
