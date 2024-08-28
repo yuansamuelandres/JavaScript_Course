@@ -1,17 +1,19 @@
 // In the name of Allah
 
+/* Destructing Practise */
 const user = {
-    nombre: "Yuan",
-    age: 23,
-    skills: {
-        html: 60,
-        css: 70
+    theName: "Yuan",
+    theAge: 23,
+    skills: ["HTML", "CSS", "JavaScript"],
+    addresses: {
+        egypt: "Cairo",
+        another: "Alexandria"
     }
 }
-show(user)
-function show ({nombre: theName, age, skills: {css}} = user) {
-    console.log(theName)
-}
 
-/* Destructing Function Parameters
-*/
+const {theName: n,
+    theAge: a, 
+    skills: [one, , three], 
+    addresses: {egypt: e}} = user 
+
+console.log(n)
