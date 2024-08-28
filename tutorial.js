@@ -1,24 +1,17 @@
 // In the name of Allah
 
 const user = {
-    theName: "Yuan",
-    theAge: 23,
-    theTitle: "Programmer",
-    theCountry: "Egypt",
+    nombre: "Yuan",
+    age: 23,
     skills: {
-        html: 70,
-        css: 80,
-    },
+        html: 60,
+        css: 70
+    }
 }
-let theName = user.theName
-let theAge = user.theAge
-let theTitle = user.theTitle
-let theCountry = user.theCountry;
-({theName: n, theTitle, theCountry,
-    theColor = "Black", skills: {html}} = user)
-console.log(n)
-console.log(theAge)
-console.log(html)
+show(user)
+function show ({nombre: theName, age, skills: {css}} = user) {
+    console.log(theName)
+}
 
-/* Destructing Objects 
+/* Destructing Function Parameters
 */
