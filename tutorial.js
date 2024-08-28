@@ -1,19 +1,41 @@
 // In the name of Allah
 
-/* Destructing Practise */
-const user = {
-    theName: "Yuan",
-    theAge: 23,
-    skills: ["HTML", "CSS", "JavaScript"],
-    addresses: {
-        egypt: "Cairo",
-        another: "Alexandria"
+/* Challenge 14: Destructing */
+let chosen = 3
+let myFriends = [
+    {title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"]},
+    {title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"]},
+    {title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"]}
+]
+
+if (chosen === 1) {
+    let [{title: theName, age: theAge, available: x, skills:[, skill]}, , ] = myFriends
+    console.log(theName)
+    console.log(theAge)
+    if (x === true) {
+        console.log(`Available`)
+    } else {
+        console.log(`Not Available`)
     }
+    console.log(skill)
+} else if (chosen === 2) {
+    let [, {title: theName, age: theAge, available: x, skills:[, skill]}, ] = myFriends
+    console.log(theName)
+    console.log(theAge)
+    if (x === true) {
+        console.log(`Available`)
+    } else {
+        console.log(`Not Available`)
+    }
+    console.log(skill)
+} else {
+    let [, , {title: theName, age: theAge, available: x, skills:[, skill]}] = myFriends
+    console.log(theName)
+    console.log(theAge)
+    if (x === true) {
+        console.log(`Available`)
+    } else {
+        console.log(`Not Available`)
+    }
+    console.log(skill)
 }
-
-const {theName: n,
-    theAge: a, 
-    skills: [one, , three], 
-    addresses: {egypt: e}} = user 
-
-console.log(n)
