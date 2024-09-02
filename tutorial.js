@@ -1,20 +1,18 @@
 // In the name of Allah
 
-let myMap = new Map([
-    [10, "Number"],
-    ["Yuan", "String"],
-    [false, "Boolean"]
-])
+let mapUser = {theName: "Yuan"}
+let myMap = new Map()
+myMap.set(mapUser, "Object")
+mapUser = null
+console.log(myMap)
 
-console.log(myMap.has(false))
+let wMapUser = {theName: "Yuan"}
+let myWeakMap = new Map()
+myWeakMap.set(wMapUser, "Object")
+wMapUser = null
+console.log(myWeakMap)
 
-/* Map Methods:
-    set
-    get
-    delete
-    clear
-    has
-
-Properties:
-    size
+/* Map vs WeakMap:
+Map => key can be anything
+WeakMap => key can be objects only
 */
