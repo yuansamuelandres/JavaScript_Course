@@ -36,7 +36,3 @@ Object => not directly & needs to use .keys()
 Map => better performance when adding or removing data
 Object => low performance compared to Map
 */
-/*
-! Search:
-    - WeakSet use cases
-*/
