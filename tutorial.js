@@ -1,18 +1,25 @@
 // In the name of Allah
 
-let mapUser = {theName: "Yuan"}
-let myMap = new Map()
-myMap.set(mapUser, "Object")
-mapUser = null
-console.log(myMap)
+console.log(Array.from("Yuan"))
+console.log(Array.from("123", function (n) {
+    return +n
+}))
 
-let wMapUser = {theName: "Yuan"}
-let myWeakMap = new Map()
-myWeakMap.set(wMapUser, "Object")
-wMapUser = null
-console.log(myWeakMap)
+let myArray = [1, 1, 1, 2, 3, 4]
+// let mySet = new Set(myArray)
+// console.log(Array.from(mySet))
+console.log([...new Set(myArray)])    // Spread Operator
 
-/* Map vs WeakMap:
-Map => key can be anything
-WeakMap => key can be objects only
+function testArg () {
+    return Array.from(arguments)
+}
+console.log(testArg("Yuan", "Samuel"))
+
+/* Array Methods:
+    Array.from(Iterable, MapFunction, This)
+        - Variable
+        - String Numbers
+        - Set
+        - Using the Map Function
+        - arguments usage inside the function
 */
