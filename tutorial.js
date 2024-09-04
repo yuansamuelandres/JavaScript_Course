@@ -1,12 +1,31 @@
 // In the name of Allah
 
-let myArray = [10, 20, 30, 40, 50, "A", "B"]
-// myArray.copyWithin(3) //[10, 20, 30, 10, 20, 30, 40]
-// myArray.copyWithin(4, -1)  //[10, 20, 30, 40, "B", "A", "B"]
-// myArray.copyWithin(1, -2)  //[10, "A", "B", 40, 50, "A", "B"]
-myArray.copyWithin(1, -2, -1)  //[10, "A", 30, 40, 50, "A", "B"]
-console.log(myArray)
+let nums = [1, 2, 3, 4, 5, 6, 7]
+let myNumber = 5
+let check = nums.some(function (e) {
+    console.log("Test") //6
+    return e > this
+}, myNumber)
+console.log(check)
+
+function checkValues (arr, val) {
+    return arr.some(function (E) {
+        return E === val
+    })
+}
+console.log(checkValues(nums, 5))
+
+let range = {
+    min: 10,
+    max: 20
+}
+let checkRange = nums.some(function (e) {
+    return e >= this.min && e <= this.max 
+}, range)
+console.log(checkRange)
 
 /* Array Methods:
-    Array.copyWithin(Target, Start, End)
+    Array.some(CallbackFunction(e, Index, Array), This Argument)
+        - Checks if an element exists in the array
+        - check if number is in a range
 */
