@@ -1,23 +1,37 @@
 // In the name of Allah
 
-const locations = {
-    20: "Place 1",
-    30: "Place 2",
-    10: "Place 3",
-    40: "Place 4"
+console.log([..."Yuan"])
+
+// Concatenation
+let array1 = [1, 2, 3]
+let array2 = [4, 5, 6]
+let allArrays = [...array1, ...array2]
+console.log(allArrays)
+
+// Objects
+let ob1 = {
+    a: 1,
+    b: 2,
 }
-let minLocation = 15
+let ob2 = {
+    c: 3,
+    d: 4,
+}
+console.log({...ob1, ...ob2, e: 5})
 
-let locationsArray = Object.keys(locations)
-console.log(Array.from(locationsArray, (e) => {
-    return +e
-}))
+// Copying
+let copy = [...array1]
+console.log(copy)
 
-let check = locationsArray.every(function (e) {
-    return e > this
-}, minLocation)
-console.log(check)
+// Push 
+let allFriends = ["Yuan", "Samuel"]
+let thisYear = ["Andrew"]
+allFriends.push(...thisYear)
+console.log(allFriends)
 
-/* Array Methods:
-    Array.every(CallbackFunction(e, i, a), this Argument)
+// Math Object
+let nums = [10, 20, -200, 500]
+console.log(Math.max(...nums))
+
+/* Spread Operator => ...Iterable
 */
