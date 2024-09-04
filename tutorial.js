@@ -1,31 +1,23 @@
 // In the name of Allah
 
-let nums = [1, 2, 3, 4, 5, 6, 7]
-let myNumber = 5
-let check = nums.some(function (e) {
-    console.log("Test") //6
+const locations = {
+    20: "Place 1",
+    30: "Place 2",
+    10: "Place 3",
+    40: "Place 4"
+}
+let minLocation = 15
+
+let locationsArray = Object.keys(locations)
+console.log(Array.from(locationsArray, (e) => {
+    return +e
+}))
+
+let check = locationsArray.every(function (e) {
     return e > this
-}, myNumber)
+}, minLocation)
 console.log(check)
 
-function checkValues (arr, val) {
-    return arr.some(function (E) {
-        return E === val
-    })
-}
-console.log(checkValues(nums, 5))
-
-let range = {
-    min: 10,
-    max: 20
-}
-let checkRange = nums.some(function (e) {
-    return e >= this.min && e <= this.max 
-}, range)
-console.log(checkRange)
-
 /* Array Methods:
-    Array.some(CallbackFunction(e, Index, Array), This Argument)
-        - Checks if an element exists in the array
-        - check if number is in a range
+    Array.every(CallbackFunction(e, i, a), this Argument)
 */
