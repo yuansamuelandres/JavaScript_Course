@@ -1,9 +1,23 @@
 // In the name of Allah
 
-/* Challenge 15: Map & Set */
-let n1 = [10, 30, 10, 20]
-let n2 = [30, 20, 10]
+let invalidEmail = "yuan@@@gmail....com"
+let validEmail = "yuan@gmail.com"
 
-console.log(Math.max(...n2) * [...n1, ...n2].length)   // 210
+let myString = "Hello Elzero Web School I Love elzero"
+let regex = /Elzero/ig
 
-// 70 * 6 = 420 / 2 = 210
+console.log(myString.match(regex))
+
+
+/* Regular Expression:
+    - Syntax => /pattern/
+    - Modifiers => Flags
+        i = case insensitive
+        g = global
+        m = multilines
+    .match
+        - matches a string againist a Regular Expression pattern
+        - returns an array with the matches or null
+
+    new RegExp("pattern", "modifier")
+*/
