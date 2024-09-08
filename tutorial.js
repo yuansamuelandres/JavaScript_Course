@@ -1,23 +1,36 @@
 // In the name of Allah
 
-let invalidEmail = "yuan@@@gmail....com"
-let validEmail = "yuan@gmail.com"
+let tld = "com net org info code io"
+let tldRe = /(org|info|io)/ig
+console.log(tld.match(tldRe))
 
-let myString = "Hello Elzero Web School I Love elzero"
-let regex = /Elzero/ig
+let nums = "12345678910"
+let numsRe = /([0-9])/g
+console.log(nums.match(numsRe))
 
-console.log(myString.match(regex))
+let notNums = "12345678910"
+let notNumsRe = /([^0-9])/g
+console.log(notNums.match(notNumsRe))
 
+let practice = "os1 os1os os2 os8 os8os"
+let practiceRe = /(os[5-9]os)/g
+console.log(practice.match(practiceRe))
 
-/* Regular Expression:
-    - Syntax => /pattern/
-    - Modifiers => Flags
-        i = case insensitive
-        g = global
-        m = multilines
-    .match
-        - matches a string againist a Regular Expression pattern
-        - returns an array with the matches or null
+let myString = "AaBbcdefG123!234%^&*"
+let atozSmall = /[a-z]/g
+console.log(myString.match(atozSmall))
 
-    new RegExp("pattern", "modifier")
+let notletters = /[a-zA-Z]/g
+console.log(myString.match(notletters))
+
+/* Regular Expression: Ranges
+    (X|Y) => X or Y
+    [0-9] => 0 to 9     
+    [^0-9] 
+    [a-z]
+    [^a-z]
+    [A-Z]
+    [^A-Z]
+    [abc]
+    [^abc]
 */
