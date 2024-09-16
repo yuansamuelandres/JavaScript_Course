@@ -1,36 +1,32 @@
 // In the name of Allah
 
-let tld = "com net org info code io"
-let tldRe = /(org|info|io)/ig
-console.log(tld.match(tldRe))
+let email = "O@@@...com O@g.net A@Y.com O-g.com o@s.org 1@1.com"
+let dot = /./g
+console.log(email.match(dot))
 
-let nums = "12345678910"
-let numsRe = /([0-9])/g
-console.log(nums.match(numsRe))
+let word = /\w/g
+console.log(email.match(word))
 
-let notNums = "12345678910"
-let notNumsRe = /([^0-9])/g
-console.log(notNums.match(notNumsRe))
+let valid = /\w@\w.(com|net)/g
+console.log(email.match(valid))
 
-let practice = "os1 os1os os2 os8 os8os"
-let practiceRe = /(os[5-9]os)/g
-console.log(practice.match(practiceRe))
+let names = "Sayed 1Spam 2Spam 3Spam Spam4 Spam5 Osama Ahmed Aspamo"
+let re = /(\bspam|spam\b)/ig
+console.log(names.match(re))
 
-let myString = "AaBbcdefG123!234%^&*"
-let atozSmall = /[a-z]/g
-console.log(myString.match(atozSmall))
+console.log(re.test(names))
 
-let notletters = /[a-zA-Z]/g
-console.log(myString.match(notletters))
+/* Regular Expression: Character Classes
+    . => matches any character, except new lines or other line terminators
+    \w => matches word characters [a-z, A-Z, 0-9, _]
+    \W => matches non-word characters
+    \d => matches digits from 0 to 9
+    \D => matches non-digit characters
+    \s => matches whitespace characters
+    \S => matches non-whitespace characters
+    \b => matches at the beginning/end of a word
+    \B => matches NOT at the beginning/end of a word
 
-/* Regular Expression: Ranges
-    (X|Y) => X or Y
-    [0-9] => 0 to 9     
-    [^0-9] 
-    [a-z]
-    [^a-z]
-    [A-Z]
-    [^A-Z]
-    [abc]
-    [^abc]
+    Test Method:
+        pattern.test(input)
 */
